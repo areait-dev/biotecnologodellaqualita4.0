@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Viga, Nunito } from "next/font/google";
 import Script from "next/script";
+import { CONTATTI_ALETHEIA, ORE_STRUTTURA, SEDE_CORSO } from "@/lib/data";
 import "./globals.css";
 
 const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID;
@@ -17,7 +18,10 @@ const nunito = Nunito({
   subsets: ["latin"],
 });
 
+const SITE_URL = "https://biotecnologoqualita40.aletheiasrl.it";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Biotecnologo della Qualità 4.0 | Alètheia ITS STEP",
   description:
     "Percorso ITS STEP Biotecnologo della Qualità 4.0 a Vittoria (RG), promosso da Alètheia. 2.000 ore tra aula, laboratori e 1.000 ore di stage aziendale.",
@@ -29,16 +33,75 @@ export const metadata: Metadata = {
     "Vittoria RG",
     "ITS STEP",
   ],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Biotecnologo della Qualità 4.0 | Alètheia ITS STEP",
     description:
       "Percorso ITS STEP a Vittoria (RG): 2.000 ore tra aula, laboratori e stage aziendale per diventare Biotecnologo della Qualità.",
+    url: SITE_URL,
     type: "website",
     locale: "it_IT",
     // [DA CONFERMARE] Sostituire con un'immagine dedicata 1200x630 per una resa
     // ottimale negli annunci Facebook; per ora riusa il logo Alètheia.
     images: ["/aletheia-logo.png"],
   },
+};
+
+const JSON_LD = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "EducationalOrganization",
+      "@id": `${SITE_URL}/#organization`,
+      name: "Alètheia",
+      url: SITE_URL,
+      logo: `${SITE_URL}/aletheia-logo.png`,
+      telephone: CONTATTI_ALETHEIA.telefono,
+      email: CONTATTI_ALETHEIA.email,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: SEDE_CORSO.indirizzo,
+        addressLocality: "Vittoria",
+        addressRegion: "RG",
+        addressCountry: "IT",
+      },
+      sameAs: [
+        CONTATTI_ALETHEIA.social.instagram,
+        CONTATTI_ALETHEIA.social.facebook,
+        CONTATTI_ALETHEIA.social.linkedin,
+      ],
+    },
+    {
+      "@type": "Course",
+      "@id": `${SITE_URL}/#course`,
+      name: "Biotecnologo della Qualità 4.0",
+      description:
+        "Percorso ITS STEP per Tecnico Superiore per il sistema di qualità di prodotti e processi a base biotecnologica e chimico-industriali. 2.000 ore tra aula, laboratori e stage aziendale.",
+      provider: {
+        "@id": `${SITE_URL}/#organization`,
+      },
+      timeRequired: `PT${ORE_STRUTTURA.totali}H`,
+      educationalCredentialAwarded:
+        "Diploma di Tecnico Superiore (V livello EQF)",
+      hasCourseInstance: {
+        "@type": "CourseInstance",
+        courseMode: "onsite",
+        location: {
+          "@type": "Place",
+          name: SEDE_CORSO.nome,
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: SEDE_CORSO.indirizzo,
+            addressLocality: "Vittoria",
+            addressRegion: "RG",
+            addressCountry: "IT",
+          },
+        },
+      },
+    },
+  ],
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -50,6 +113,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <head>
         <link rel="preconnect" href="https://www.google.com" />
         <link rel="preconnect" href="https://maps.google.com" />
+        <Script id="jsonld-course" type="application/ld+json" strategy="beforeInteractive">
+          {JSON.stringify(JSON_LD)}
+        </Script>
       </head>
       <body className="min-h-full flex flex-col">
         {children}
