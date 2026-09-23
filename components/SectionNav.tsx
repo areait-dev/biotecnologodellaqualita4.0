@@ -60,7 +60,7 @@ export default function SectionNav() {
       {/* Sidebar desktop */}
       <nav
         aria-label="Navigazione sezioni"
-        className="hidden lg:block sticky top-24 mt-12 h-fit w-64 shrink-0 pl-6"
+        className="hidden xl:block sticky top-24 mt-12 h-fit w-64 shrink-0 pl-6"
       >
         <ul className="space-y-1 border-r border-brand-200 dark:border-brand-800">
           {SEZIONI_NAV.map((sezione) => {
@@ -90,7 +90,7 @@ export default function SectionNav() {
       {/* Tab bar mobile */}
       <nav
         aria-label="Navigazione sezioni"
-        className="lg:hidden sticky top-16 z-30 -mx-4 mb-6 overflow-x-auto border-b border-brand-200 bg-background/95 px-4 backdrop-blur dark:border-brand-800"
+        className="xl:hidden sticky top-16 z-30 -mx-4 mb-6 overflow-x-auto border-b border-brand-200 bg-background/95 px-4 backdrop-blur dark:border-brand-800"
       >
         <ul className="flex gap-1 whitespace-nowrap py-2">
           {SEZIONI_NAV.map((sezione) => {

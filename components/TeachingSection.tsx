@@ -10,7 +10,7 @@ export default function TeachingSection() {
         Didattica
       </h2>
 
-      <div className="mt-4 divide-y divide-brand-200 border-t border-brand-200 dark:divide-brand-800 dark:border-brand-800">
+      <div className="mt-3 divide-y divide-brand-200 border-t border-brand-200 dark:divide-brand-800 dark:border-brand-800">
         <div className="py-3">
           <p className="text-sm font-semibold uppercase tracking-wide">
             Frequenza obbligatoria

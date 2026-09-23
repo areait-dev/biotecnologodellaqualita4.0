@@ -7,13 +7,15 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4">
         <div className="grid gap-8 sm:grid-cols-3">
           <div>
-            <Image
-              src="/aletheia-logo.png"
-              alt="Alètheia"
-              width={829}
-              height={409}
-              className="h-24 w-auto brightness-0 invert"
-            />
+            <a href="https://www.aletheiasrl.it" target="_blank" rel="noopener noreferrer">
+              <Image
+                src="/aletheia-logo.png"
+                alt="Alètheia"
+                width={829}
+                height={409}
+                className="h-24 w-auto brightness-0 invert"
+              />
+            </a>
           </div>
 
           <div>
@@ -102,13 +104,15 @@ export default function Footer() {
                 height={193}
                 className="h-9 w-auto"
               />
-              <Image
-                src="/promotergroup-logo-white.png"
-                alt="Promotergroup SpA"
-                width={1293}
-                height={327}
-                className="h-8 w-auto"
-              />
+              <a href="https://www.promotergroup.eu" target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="/promotergroup-logo-white.png"
+                  alt="Promotergroup SpA"
+                  width={1293}
+                  height={327}
+                  className="h-8 w-auto"
+                />
+              </a>
             </div>
           </div>
         </div>

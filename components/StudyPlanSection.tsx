@@ -55,10 +55,10 @@ export default function StudyPlanSection() {
       <h2 className="text-2xl font-bold uppercase tracking-tight sm:text-3xl">
         Il piano di studi
       </h2>
-      <p className="mt-3 text-foreground/70">
+      <p className="mt-3 text-sm text-foreground/70">
         {DIDATTICA.pianoStudiIntro}
       </p>
-      <p className="mt-3 text-foreground/70">
+      <p className="mt-3 text-sm text-foreground/70">
         {DIDATTICA.pianoStudiOrePresenza}
         <br />
         {DIDATTICA.pianoStudiNote}

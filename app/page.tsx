@@ -17,9 +17,9 @@ export default function Home() {
     <>
       <Header />
       <Hero />
-      <main className="mx-auto w-full max-w-7xl flex-1 px-4 pt-10 lg:pt-14">
-        <div className="lg:flex lg:items-start lg:justify-between lg:gap-16">
-          <div className="min-w-0 lg:w-full lg:max-w-3xl">
+      <main className="mx-auto w-full max-w-7xl flex-1 px-4 pt-10 xl:pt-14">
+        <div className="xl:flex xl:items-start xl:justify-between xl:gap-16">
+          <div className="min-w-0 xl:w-full xl:max-w-3xl">
             <WorkplaceSection />
             <QualificationSection />
             <InternshipSection />

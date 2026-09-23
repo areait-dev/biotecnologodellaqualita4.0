@@ -9,7 +9,7 @@ export default function InternshipSection() {
       <h2 className="text-2xl font-bold uppercase tracking-tight sm:text-3xl">
         Stage in azienda
       </h2>
-      <p className="mt-3 text-foreground/70">
+      <p className="mt-3 text-sm text-foreground/70">
         L&apos;attività di stage/tirocinio viene effettuata nelle stesse
         aziende che hanno evidenziato il fabbisogno che ha condotto alla
         progettazione del percorso formativo.

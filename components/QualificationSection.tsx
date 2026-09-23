@@ -9,7 +9,7 @@ export default function QualificationSection() {
       <h2 className="text-2xl font-bold uppercase tracking-tight sm:text-3xl">
         Titolo di studio
       </h2>
-      <div className="mt-4 space-y-3 text-sm text-foreground/75">
+      <div className="mt-3 space-y-3 text-sm text-foreground/75">
         <p>{TITOLO_DI_STUDIO.titolo}</p>
         <p>{TITOLO_DI_STUDIO.figura}</p>
       </div>

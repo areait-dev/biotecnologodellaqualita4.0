@@ -12,7 +12,7 @@ import { trackMetaPixelEvent } from "@/lib/meta-pixel";
 type Status = "idle" | "loading" | "success" | "error";
 
 const inputClass =
-  "mt-1 w-full rounded-sm border border-brand-300 bg-background px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-brand-500 dark:border-brand-700";
+  "mt-1 w-full rounded-sm border border-brand-300 bg-background px-3 py-2 text-base outline-none focus-visible:ring-2 focus-visible:ring-brand-500 dark:border-brand-700";
 
 export default function LeadForm() {
   const [status, setStatus] = useState<Status>("idle");
@@ -131,7 +131,7 @@ export default function LeadForm() {
               name="prefissoTelefono"
               defaultValue="+39"
               aria-label="Prefisso internazionale"
-              className="w-24 shrink-0 rounded-sm border border-brand-300 bg-background px-2 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-brand-500 dark:border-brand-700"
+              className="w-24 shrink-0 rounded-sm border border-brand-300 bg-background px-2 py-2 text-base outline-none focus-visible:ring-2 focus-visible:ring-brand-500 dark:border-brand-700"
             >
               <option value="+39">+39</option>
             </select>
@@ -314,7 +314,7 @@ export default function LeadForm() {
           required
           className="mt-1 h-4 w-4 shrink-0 rounded border-brand-300 text-brand-600 focus-visible:ring-2 focus-visible:ring-brand-500 dark:border-brand-700"
         />
-        <label htmlFor="privacyConsent" className="text-xs text-foreground/70">
+        <label htmlFor="privacyConsent" className="text-sm text-foreground/70">
           Ho letto l&apos;
           <a
             href={PRIVACY_POLICY_URL}
