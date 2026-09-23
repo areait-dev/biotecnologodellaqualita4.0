@@ -30,7 +30,6 @@ export default function LocationSection() {
           width="100%"
           height="300"
           style={{ border: 0 }}
-          loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         />
       </div>

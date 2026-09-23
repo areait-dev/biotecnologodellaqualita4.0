@@ -46,6 +46,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="it"
       className={`${viga.variable} ${nunito.variable} h-full antialiased`}
     >
+      <head>
+        <link rel="preconnect" href="https://www.google.com" />
+        <link rel="preconnect" href="https://maps.google.com" />
+      </head>
       <body className="min-h-full flex flex-col">
         {children}
 
