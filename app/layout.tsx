@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Biotecnologo della Qualità 4.0 | Alètheia ITS STEP",
+    title: "Biotecnologo della Qualità 4.0 | Alètheia",
     description:
       "Percorso a Vittoria (RG): 2.000 ore tra aula, laboratori e stage aziendale per diventare Biotecnologo della Qualità.",
     url: SITE_URL,
@@ -48,13 +48,13 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Biotecnologo della Qualità 4.0 - Alètheia ITS STEP, Vittoria (RG)",
+        alt: "Biotecnologo della Qualità 4.0 - Alètheia, Vittoria (RG)",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Biotecnologo della Qualità 4.0 | Alètheia ITS STEP",
+    title: "Biotecnologo della Qualità 4.0 | Alètheia",
     description:
       "Percorso a Vittoria (RG): 2.000 ore tra aula, laboratori e stage aziendale per diventare Biotecnologo della Qualità.",
     images: ["/og-image.jpg"],
