@@ -8,6 +8,7 @@ import {
   TITOLO_STUDIO_OPTIONS,
 } from "@/lib/data";
 import { trackMetaPixelEvent } from "@/lib/meta-pixel";
+import { trackEvent } from "@/lib/analytics";
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -45,6 +46,9 @@ export default function LeadForm() {
       setStatus("success");
       trackMetaPixelEvent("Lead", {
         content_name: "Biotecnologo della Qualità 4.0 - Vittoria (RG)",
+      });
+      trackEvent("generate_lead", {
+        form_name: "candidatura",
       });
       form.reset();
     } catch {

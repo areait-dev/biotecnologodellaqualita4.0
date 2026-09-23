@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import { CONTATTI_ALETHEIA } from "@/lib/data";
+import { trackEvent } from "@/lib/analytics";
 
 export default function Footer() {
   return (
@@ -7,7 +10,12 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4">
         <div className="grid gap-8 sm:grid-cols-3">
           <div>
-            <a href="https://www.aletheiasrl.it" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.aletheiasrl.it"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackEvent("logo_click", { logo_name: "aletheia" })}
+            >
               <Image
                 src="/aletheia-logo.png"
                 alt="Alètheia"
@@ -104,7 +112,12 @@ export default function Footer() {
                 height={193}
                 className="h-9 w-auto"
               />
-              <a href="https://www.promotergroup.eu" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.promotergroup.eu"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackEvent("logo_click", { logo_name: "promotergroup" })}
+              >
                 <Image
                   src="/promotergroup-logo-white.png"
                   alt="Promotergroup SpA"
