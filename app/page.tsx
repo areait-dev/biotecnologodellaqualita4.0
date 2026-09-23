@@ -11,6 +11,7 @@ import TeachingSection from "@/components/TeachingSection";
 import MaterialSection from "@/components/MaterialSection";
 import CandidateSection from "@/components/CandidateSection";
 import Footer from "@/components/Footer";
+import BackToTop from "@/components/BackToTop";
 
 export default function Home() {
   return (
@@ -19,7 +20,8 @@ export default function Home() {
       <Hero />
       <main className="mx-auto w-full max-w-7xl flex-1 px-4 pt-10 xl:pt-14">
         <div className="xl:flex xl:items-start xl:justify-between xl:gap-16">
-          <div className="min-w-0 xl:w-full xl:max-w-3xl">
+          <SectionNav />
+          <div className="min-w-0 xl:order-1 xl:w-full xl:max-w-3xl">
             <WorkplaceSection />
             <QualificationSection />
             <InternshipSection />
@@ -29,11 +31,11 @@ export default function Home() {
             <StudyPlanSection />
             <MaterialSection />
           </div>
-          <SectionNav />
         </div>
         <CandidateSection />
       </main>
       <Footer />
+      <BackToTop />
     </>
   );
 }

@@ -60,7 +60,7 @@ export default function SectionNav() {
       {/* Sidebar desktop */}
       <nav
         aria-label="Navigazione sezioni"
-        className="hidden xl:block sticky top-24 mt-12 h-fit w-64 shrink-0 pl-6"
+        className="hidden xl:order-2 xl:block sticky top-24 mt-12 h-fit w-64 shrink-0 pl-6"
       >
         <ul className="space-y-1 border-r border-brand-200 dark:border-brand-800">
           {SEZIONI_NAV.map((sezione) => {
