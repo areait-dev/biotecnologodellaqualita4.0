@@ -10,7 +10,7 @@ export const CONTATTI_ALETHEIA = {
   social: {
     instagram: "https://instagram.com/aletheiasrl",
     facebook: "https://facebook.com/aletheiasrl.it",
-    linkedin: "https://it.linkedin.com/company/al%C3%A8theia-srl",
+    linkedin: "https://it.linkedin.com/company/al%C3%A9theia-srl",
   },
 };
 
