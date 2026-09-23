@@ -117,7 +117,7 @@ export default function SectionNav() {
                   href={`#${sezione.id}`}
                   onClick={(event) => handleClick(event, sezione.id)}
                   className={[
-                    "block cursor-pointer rounded-full px-3 py-1.5 text-sm uppercase tracking-wide transition-colors",
+                    "block cursor-pointer px-3 py-1.5 text-sm uppercase tracking-wide transition-colors",
                     "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500",
                     isActive
                       ? "bg-brand-600 text-white font-semibold"
