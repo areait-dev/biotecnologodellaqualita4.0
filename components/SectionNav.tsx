@@ -106,7 +106,7 @@ export default function SectionNav() {
       <nav
         ref={mobileNavRef}
         aria-label="Navigazione sezioni"
-        className="xl:hidden sticky top-16 z-30 -mx-4 mb-6 overflow-x-auto border-b border-brand-200 bg-background/95 px-4 backdrop-blur dark:border-brand-800"
+        className="xl:hidden sticky top-[4.5rem] z-30 -mx-4 mt-4 mb-6 overflow-x-auto border-b border-brand-200 bg-background/95 px-4 backdrop-blur dark:border-brand-800"
       >
         <ul className="flex gap-1 whitespace-nowrap py-2">
           {SEZIONI_NAV.map((sezione) => {
