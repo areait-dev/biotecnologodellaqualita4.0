@@ -1,10 +1,11 @@
 "use client";
 
-import { MouseEvent, useEffect, useState } from "react";
+import { MouseEvent, useEffect, useRef, useState } from "react";
 import { SEZIONI_NAV } from "@/lib/data";
 
 export default function SectionNav() {
   const [activeId, setActiveId] = useState<string>(SEZIONI_NAV[0].id);
+  const mobileNavRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const sections = SEZIONI_NAV.map((s) => document.getElementById(s.id)).filter(
@@ -42,6 +43,20 @@ export default function SectionNav() {
       window.removeEventListener("resize", updateActiveSection);
     };
   }, []);
+
+  useEffect(() => {
+    const container = mobileNavRef.current;
+    if (!container) return;
+
+    const activeLink = container.querySelector<HTMLAnchorElement>(
+      `a[href="#${activeId}"]`
+    );
+    activeLink?.scrollIntoView({
+      behavior: "smooth",
+      inline: "center",
+      block: "nearest",
+    });
+  }, [activeId]);
 
   const handleClick = (
     event: MouseEvent<HTMLAnchorElement>,
@@ -89,6 +104,7 @@ export default function SectionNav() {
 
       {/* Tab bar mobile */}
       <nav
+        ref={mobileNavRef}
         aria-label="Navigazione sezioni"
         className="xl:hidden sticky top-16 z-30 -mx-4 mb-6 overflow-x-auto border-b border-brand-200 bg-background/95 px-4 backdrop-blur dark:border-brand-800"
       >
