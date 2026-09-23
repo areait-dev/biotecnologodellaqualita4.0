@@ -10,12 +10,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4">
         <div className="grid gap-8 sm:grid-cols-3">
           <div>
-            <a
-              href="https://www.aletheiasrl.it"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => trackEvent("logo_click", { logo_name: "aletheia" })}
-            >
+            <a href="https://www.aletheiasrl.it" target="_blank" rel="noopener noreferrer">
               <Image
                 src="/aletheia-logo.png"
                 alt="Alètheia"
@@ -32,6 +27,7 @@ export default function Footer() {
               <li>
                 <a
                   href={`tel:${CONTATTI_ALETHEIA.telefono.replace(/\s/g, "")}`}
+                  onClick={() => trackEvent("phone_click", { source: "footer" })}
                   className="hover:text-brand-200"
                 >
                   {CONTATTI_ALETHEIA.telefono}
@@ -112,12 +108,7 @@ export default function Footer() {
                 height={193}
                 className="h-9 w-auto"
               />
-              <a
-                href="https://www.promotergroup.eu"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => trackEvent("logo_click", { logo_name: "promotergroup" })}
-              >
+              <a href="https://www.promotergroup.eu" target="_blank" rel="noopener noreferrer">
                 <Image
                   src="/promotergroup-logo-white.png"
                   alt="Promotergroup SpA"

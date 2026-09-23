@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { CONTATTI_ALETHEIA } from "@/lib/data";
+import { trackEvent } from "@/lib/analytics";
 
 export default function Header() {
   return (
@@ -20,6 +23,7 @@ export default function Header() {
         <div className="flex items-center gap-3">
           <a
             href={`tel:${CONTATTI_ALETHEIA.telefono.replace(/\s/g, "")}`}
+            onClick={() => trackEvent("phone_click", { source: "header" })}
             className="hidden text-sm text-white/80 hover:text-white sm:inline"
           >
             {CONTATTI_ALETHEIA.telefono}

@@ -345,6 +345,7 @@ export default function LeadForm() {
       <button
         type="submit"
         disabled={status === "loading"}
+        onClick={() => trackEvent("cta_click", { cta_name: "invia_richiesta_form" })}
         className="w-full rounded-lg bg-brand-600 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-sm transition-colors hover:bg-brand-700 disabled:cursor-not-allowed disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500"
       >
         {status === "loading" ? "Invio in corso..." : "Invia la richiesta"}
@@ -352,7 +353,11 @@ export default function LeadForm() {
 
       <p className="text-xs text-foreground/60">
         Hai bisogno di parlare subito con noi? Chiamaci al{" "}
-        <a className="underline" href={`tel:${CONTATTI_ALETHEIA.telefono.replace(/\s/g, "")}`}>
+        <a
+          className="underline"
+          href={`tel:${CONTATTI_ALETHEIA.telefono.replace(/\s/g, "")}`}
+          onClick={() => trackEvent("phone_click", { source: "form" })}
+        >
           {CONTATTI_ALETHEIA.telefono}
         </a>{" "}
         oppure scrivici a{" "}

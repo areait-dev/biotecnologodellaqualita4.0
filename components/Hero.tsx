@@ -1,8 +1,5 @@
-"use client";
-
 import Image from "next/image";
 import { POSTI_DISPONIBILI } from "@/lib/data";
-import { trackEvent } from "@/lib/analytics";
 
 const BADGES = [
   { value: "2.000 ore", label: "durata totale del percorso" },
@@ -81,7 +78,6 @@ export default function Hero() {
         <div className="mt-8">
           <a
             href="#modulo-candidatura"
-            onClick={() => trackEvent("cta_click", { cta_name: "richiedi_informazioni_hero" })}
             className="inline-flex items-center gap-2 rounded-lg bg-brand-600 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-sm transition-colors hover:bg-brand-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500"
           >
             Richiedi informazioni
