@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     locale: "it_IT",
     images: [
       {
-        url: "/og-image.jpg?v=3",
+        url: "/og-image.jpg?v=4",
         width: 1200,
         height: 630,
         alt: "Biotecnologo della Qualità 4.0 - Alètheia, Vittoria (RG)",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     title: "Biotecnologo della Qualità 4.0 | Alètheia",
     description:
       "Percorso a Vittoria (RG): 2.000 ore tra aula, laboratori e stage aziendale per diventare Biotecnologo della Qualità.",
-    images: ["/og-image.jpg?v=3"],
+    images: ["/og-image.jpg?v=4"],
   },
 };
 
